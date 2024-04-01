@@ -1,6 +1,6 @@
 # Title question
 
-Welcome to _. The purpose of this repository is to provide access to the relevant code, ipynb files and figures for the final individual GEOL0069 2023/24 assignment. The primary focus is on sea ice and lead classification.
+The purpose of this repository is to provide access to the relevant code, ipynb files, figures and versions for the final individual GEOL0069 2023/24 assignment. The aim of this project is to study the ability of AI in sea ice and lead classification.
 
 ## Edit from here. Description
 
