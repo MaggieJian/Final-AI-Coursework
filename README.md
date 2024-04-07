@@ -2,6 +2,13 @@
 
 We will use IRIS software for surface classification of SEA ICE/LAND, aiming to create ingest satellite imagery within the IRIS framework to help them create semi-supervised classified imagery. [input the goal sentence]. The purpose of this repository is to provide access to the relevant code, ipynb files, figures and versions for a project as part of an assignment for the module GEOL0069. 
 
+# List of contents
+* Background context
+* Methodology
+* aaa
+* References
+
+# Background context
 Methodology:
 
 For a supervised approach, students are encouraged to label their own dataset using tools like IRIS.
