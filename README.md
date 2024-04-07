@@ -2,6 +2,8 @@
 
 The purpose of this repository is to provide access to the relevant code, ipynb files, figures and versions for the final individual GEOL0069 2023/24 assignment. The aim of this project is to study the ability of AI in sea ice and lead classification.
 
+feedback: Could improve a little on the analysis (alignment) and provide a little more info on the general context (leads and ice) in the README
+
 ## Edit from here. Description
 
 You will learn how to find lists of colocated images from pairs of collocated satellites: Sentinel-3 (300m resolution) and Sentinel-2 imagery (10m resolution) as well as collocated altimetry data from Sentinel-3. Unsupervised classification will be performed.
