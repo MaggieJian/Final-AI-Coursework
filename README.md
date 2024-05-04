@@ -1,6 +1,6 @@
 # Surface Classification of Urban Cities using IRIS software
 
-The purpose of this project is to explore the usefelness of IRIS software for surface classification in an urban setting. iming to create ingest satellite imagery: semi-supervised classified imagery that imports and incorporates data from external sources (name?) into the IRIS platform. The project can be used for a wide range of applications, is set within the context of x to create training data, however, it . of the city of within the IRIS framework. The outcome is  . [input the goal sentence]. The purpose of this repository is to provide access to the relevant code, ipynb files, figures and versions for the project.
+The purpose of this project is to explore the effectiveness of IRIS software for surface classification in an urban setting. iming to create ingest satellite imagery: semi-supervised classified imagery that imports and incorporates data from external sources (name?) into the IRIS platform. The project can be used for a wide range of applications, is set within the context of x to create training data, however, it . of the city of within the IRIS framework. The outcome is  . [input the goal sentence]. The purpose of this repository is to provide access to the relevant code, ipynb files, figures and versions for the project.
 
 # List of contents
 * Background context
