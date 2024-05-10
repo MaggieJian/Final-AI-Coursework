@@ -1,6 +1,9 @@
-# Surface Classification of Urban Cities using IRIS software
+# Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS software for surface classification using an urban setting. It creates semi-supervised classified imagery that imports and incorporates data from external sources (name?) (ingest satellite imagery) into the IRIS platform. The project can be used for a wide range of applications
+The purpose of this project is to explore the effectiveness of IRIS for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc/ in the context of the gardens of the south-eastern country of Singapore, which will be critically analysed using a comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that can make surface classification more efficient.
+
+The result summarised: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
+
 This repository provides access to the relevant code, ipynb files, figures and versions for the project.
 
 # List of contents
@@ -10,9 +13,20 @@ This repository provides access to the relevant code, ipynb files, figures and v
 * References
 
 # Background context
-Methodology:
 
-For a supervised approach, students are encouraged to label their own dataset using tools like IRIS.
+Copernicus is
+IRIS is
+Sentinel-2 is
+
+# Methodology:
+
+The image data of Sentinel-2 was retrieved using Copernicus v1.10.1.
+
+Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
+
+To create ingest satellite imagery within the IRIS framework, the image was uploaded via the Mac OS's Terminal application. The software 'Docker' was used to open IRIS, which allowed quicker access.
+Download Docker: https://docs.docker.com/get-docker/
+Docker Account (Optional): This step for those who may want to manage large sets of images and repositories via Docker Hub at https://hub.docker.com/.
 
 The goal is to demonstrate the usefulness of IRIS for surface classification on a new type of application and/or satellite imagery (urban setting with Sentinel1 or Sentinel2, cloud detection using Sentinel3, lower latitude examples…).
 
