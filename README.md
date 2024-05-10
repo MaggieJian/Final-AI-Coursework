@@ -1,6 +1,6 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc/ in the context of the gardens of the south-eastern country of Singapore, which will be critically analysed using a comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that can make surface classification more efficient.
+The purpose of this project is to explore the effectiveness of IRIS for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc. in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that can make surface classification more efficient. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
 
 The result summarised: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
 
@@ -9,7 +9,7 @@ This repository provides access to the relevant code, ipynb files, figures and v
 # List of contents
 * Background context
 * Methodology
-* aaa
+* Results and Discussion
 * References
 
 # Background context
@@ -18,21 +18,37 @@ Copernicus is
 IRIS is
 Sentinel-2 is
 
+The Gardens by the Bay in the south-eastern country of Singapore was chosen because . It is a x project that 
+X are concerned about its life and change...
+
 # Methodology:
 
-The image data of Sentinel-2 was retrieved using Copernicus v1.10.1.
+Step 1: The image data of Sentinel-2 was retrieved using Copernicus v1.10.1.
 
-Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
+Using Copernicus, a polygon was drawn on the area of interest using the ? function. 4 co-located images from the satellite were found.
 
-To create ingest satellite imagery within the IRIS framework, the image was uploaded via the Mac OS's Terminal application. The software 'Docker' was used to open IRIS, which allowed quicker access.
+<img width="1036" alt="Screenshot 2024-05-10 at 20 04 43" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/15694c72-e2c2-45a3-9f91-bc677c89fcd5">
+
+Step 2: Docker was used to open the IRIS framework
+
+The software 'Docker' was used to open IRIS, which allowed quicker access.
 Download Docker: https://docs.docker.com/get-docker/
 Docker Account (Optional): This step for those who may want to manage large sets of images and repositories via Docker Hub at https://hub.docker.com/.
 
-The goal is to demonstrate the usefulness of IRIS for surface classification on a new type of application and/or satellite imagery (urban setting with Sentinel1 or Sentinel2, cloud detection using Sentinel3, lower latitude examples…).
+To create ingest satellite imagery within the IRIS framework, the image was uploaded via the Mac OS's Terminal application. 
 
-In addition to using IRIS the student would need to develop a notebook describing their masked images in the context of the input features and compare with other unsupervised or supervised ML techniques.
+Step 3: IRIS semi-supervised classification
 
-Data access: See week 3 for fetching satellite imagery from Google EE or Copernicus Dataspace
+Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
+
+# Results and Discussion
+
+After completing Steps 1-3, the resulting masks can be found below
+[screenshot]
+
+Interpretation: In addition to using IRIS the student would need to develop a notebook describing their masked images in the context of the input features and compare with other unsupervised or supervised ML techniques.
+
+After completing Steps 4- ,
 
 feedback: Could improve a little on the analysis (alignment) and provide a little more info on the general context (leads and ice) in the README
 
