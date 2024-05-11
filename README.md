@@ -1,6 +1,6 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc. in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that can make surface classification more efficient. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
+The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc. in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that can make surface classification more efficient. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
 
 The result summarised: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
 
@@ -15,7 +15,7 @@ This repository provides access to the relevant code, ipynb files, figures and v
 # Background context
 
 Copernicus is
-IRIS is
+IRIS was developed in x to and can run on Linux, Windows and Mac OS (Wheeler, 2024).
 Sentinel-2 is
 
 The Gardens by the Bay in the south-eastern country of Singapore was chosen because . It is a x project that 
@@ -23,19 +23,21 @@ X are concerned about its life and change...
 
 # Methodology:
 
-Step 1: The image data of Sentinel-2 was retrieved using Copernicus v1.10.1.
+Step 1: The image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
 
-Using Copernicus, a polygon was drawn on the area of interest using the ? function. 4 co-located images from the satellite were found.
+Using Copernicus, draw a polygon using the ? function to select the area of interest. For the coorodinates [name them], 4 co-located images from the satellite were found.
 
 <img width="1036" alt="Screenshot 2024-05-10 at 20 04 43" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/15694c72-e2c2-45a3-9f91-bc677c89fcd5">
 
 Step 2: Docker was used to open the IRIS framework
 
-The software 'Docker' was used to open IRIS, which allowed quicker access.
-Download Docker: https://docs.docker.com/get-docker/
-Docker Account (Optional): This step for those who may want to manage large sets of images and repositories via Docker Hub at https://hub.docker.com/.
+Installing Iris directly from the GitHub repository can be time-consuming and complicated, because of the manual installation of dependencies and configuration steps. Users of the 'Docker' software can quickly bring IRIS into a centralised environment by streamlining the deployment and running process, fostering collaboration across multiple devices.
 
-To create ingest satellite imagery within the IRIS framework, the image was uploaded via the Mac OS's Terminal application. 
+Download Docker: https://docs.docker.com/get-docker/
+
+Create a Docker Account (Optional): https://hub.docker.com/ (this step for those who may want to manage large sets of images and repositories via Docker Hub)
+
+To create ingest satellite imagery within the IRIS framework, pull the image via the Mac OS's Terminal application. 
 
 Step 3: IRIS semi-supervised classification
 
@@ -137,9 +139,14 @@ Inspiration, code snippets, etc.
 
 ## References
 
-1. Seeger, M. (2004). 'Gaussian processes for machine learning'. International journal of neural systems, 14(02), pp.69-106.
-2. Oyekola, M.A. and Adewuyi, G.K. (2018). 'Unsupervised classification in land cover types using remote sensing and GIS techniques'. International Journal of Science and Engineering Investigations, 7(72), pp.11-18.
-3. Patro, R.N., Subudhi, S., Biswal, P.K. and Dell’acqua, F. (2021). 'A review of unsupervised band selection techniques: Land cover classification for hyperspectral earth observation data'. IEEE Geoscience and Remote Sensing Magazine, 9(3), pp.72-111.
-4. Camps-Valls, G., Martino, L., Svendsen, D.H., Campos-Taberner, M., Muñoz-Marí, J., Laparra, V., Luengo, D. and García-Haro, F.J. (2018). 'Physics-aware Gaussian processes in remote sensing'. Applied Soft Computing, 68, pp.69-82.
-5. Chen, W., Tsamados, M., Willatt, R., Brockley, D., Deisenroth, M., De Rijke-Thomas, C., Francis, A., Hirata, L., Johnson, T., Lawrence, I. and Landy, J. (2024). 'Co-located OLCI optical imagery and SAR altimetry from Sentinel-3 for enhanced surface classification in sea ice (No. EGU24-9175)'. Copernicus Meetings.
-6. Wang, Q., Shi, W., Li, Z. and Atkinson, P.M. (2016). 'Fusion of Sentinel-2 images'. Remote sensing of environment, 187, pp.241-252.
+1. Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
+
+‌
+
+  
+3. Seeger, M. (2004). 'Gaussian processes for machine learning'. International journal of neural systems, 14(02), pp.69-106.
+4. Oyekola, M.A. and Adewuyi, G.K. (2018). 'Unsupervised classification in land cover types using remote sensing and GIS techniques'. International Journal of Science and Engineering Investigations, 7(72), pp.11-18.
+5. Patro, R.N., Subudhi, S., Biswal, P.K. and Dell’acqua, F. (2021). 'A review of unsupervised band selection techniques: Land cover classification for hyperspectral earth observation data'. IEEE Geoscience and Remote Sensing Magazine, 9(3), pp.72-111.
+6. Camps-Valls, G., Martino, L., Svendsen, D.H., Campos-Taberner, M., Muñoz-Marí, J., Laparra, V., Luengo, D. and García-Haro, F.J. (2018). 'Physics-aware Gaussian processes in remote sensing'. Applied Soft Computing, 68, pp.69-82.
+7. Chen, W., Tsamados, M., Willatt, R., Brockley, D., Deisenroth, M., De Rijke-Thomas, C., Francis, A., Hirata, L., Johnson, T., Lawrence, I. and Landy, J. (2024). 'Co-located OLCI optical imagery and SAR altimetry from Sentinel-3 for enhanced surface classification in sea ice (No. EGU24-9175)'. Copernicus Meetings.
+8. Wang, Q., Shi, W., Li, Z. and Atkinson, P.M. (2016). 'Fusion of Sentinel-2 images'. Remote sensing of environment, 187, pp.241-252.
