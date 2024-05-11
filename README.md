@@ -1,4 +1,4 @@
-<img width="952" alt="Screenshot 2024-05-11 at 15 29 36" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/a73a14c0-76cc-48b0-a196-62ef76e8423e"># Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
+# Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
 The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
 
@@ -18,7 +18,7 @@ This repository provides access to the relevant code, ipynb files, figures and v
 
 Urban green spaces comprise pedestrian pathways, vehicle roadways, buildings, and patches of vegetation and water. Urban green spaces can be complex to classify if pedestrian pathways are woven around naturalistic designs often featuring variable topographies. These can create shadows or complex visual features that make green spaces and roads difficult to distinguish. The use of machine learning that leverages satellite imagery could help to prevent accidents and could increase the efficiency of using automated vehicles to navigate roadways that rely on automated navigation systems. Driverless vehicle technology is currently facing significant investment in the south-eastern country of Singapore (Ng, 2021).
 
-The Gardens by the Bay, located in  chosen because . It is a x project that 
+The Gardens by the Bay, located in the south x Nibong island of Singapore, was chosen because . It is a x project that 
 X are concerned about its life and change... It has benefits to the physical and mental health of residents and generates economoc value from its annual x million visitors/tourists. Some key features of the area include:
 * Artificial Lakes:
 * Buildings: 'Supertrees' and individual glasshouses
