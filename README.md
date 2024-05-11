@@ -14,16 +14,22 @@ This repository provides access to the relevant code, ipynb files, figures and v
 
 # Background context
 
-Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and European Environmental Agency (EEA). Current it consists of a satellite constellation mostly comprised of the Sentinel series to monitor air and water quality and to observe land use change, climate change and nataural disasters.
+Introduce unsupervised, K-Means clustering and green spaces
+
+why are green spaces important - see jupiter
+
+Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It was developed by the ESA-Phil lab, is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and the European Environmental Agency (EEA). Currently it retrieves data from a satellite constellation series mostly comprised of the Sentinel satellites to monitor air and water quality and to observe land use change, climate change and nataural disasters.
 Sentinel-2 is
-IRIS is a recent framework developed over the past decade to make the process of surface classification quicker and easier for users via artificial intelligence. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
+IRIS is a recent annotation tool developed over the past 4 years and aimed to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
 The Gardens by the Bay in the south-eastern country of Singapore was chosen because . It is a x project that 
 X are concerned about its life and change...
 
 # Methodology:
 
-Step 1: The image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
+Step 1: Data Collection
+
+The image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
 
 Using Copernicus, draw a polygon using the ? function to select the area of interest. For the coorodinates [name them], 4 co-located images from the satellite were found.
 
@@ -39,18 +45,28 @@ Create a Docker Account (Optional): https://hub.docker.com/ (this step for those
 
 To create ingest satellite imagery within the IRIS framework, pull the image via the Mac OS's Terminal application. 
 
-Step 3: IRIS semi-supervised classification
+Step 3: Training using IRIS semi-supervised classification
 
 Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
 
+Step 4: Model comparison with ML techniques
+
+Unsupervised K-means clustering 
+
+Step 6: Model evaluation
+
+The models will be assessed for overfitting and underfitting 
+
+The metric to assess this will be a loss function, also known as a cost function, which quantifies how distant a model’s predictions are from the actual values. Minimising this value of the deviation from the actual results is preferred. Common loss functions include Mean Squared Error for regression tasks and Cross-Entropy for classification tasks.
+
 # Results and Discussion
 
-After completing Steps 1-3, the resulting masks can be found below
+After completing Steps 1-5, the resulting masks can be found below
 [screenshot]
 
 Interpretation: In addition to using IRIS the student would need to develop a notebook describing their masked images in the context of the input features and compare with other unsupervised or supervised ML techniques.
 
-After completing Steps 4- ,
+After completing Steps 6- ,
 
 feedback: Could improve a little on the analysis (alignment) and provide a little more info on the general context (leads and ice) in the README
 
