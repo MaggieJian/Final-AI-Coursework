@@ -1,6 +1,6 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc. in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that can make surface classification more efficient. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
+The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
 
 The result summarised: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
 
@@ -14,9 +14,9 @@ This repository provides access to the relevant code, ipynb files, figures and v
 
 # Background context
 
-Copernicus is
-IRIS was developed in x to and can run on Linux, Windows and Mac OS (Wheeler, 2024).
+Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and European Environmental Agency (EEA). Current it consists of a satellite constellation mostly comprised of the Sentinel series to monitor air and water quality and to observe land use change, climate change and nataural disasters.
 Sentinel-2 is
+IRIS is a recent framework developed over the past decade to make the process of surface classification quicker and easier for users via artificial intelligence. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
 The Gardens by the Bay in the south-eastern country of Singapore was chosen because . It is a x project that 
 X are concerned about its life and change...
