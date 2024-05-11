@@ -1,10 +1,10 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
+The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications requiring more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
 
-Result summary: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
+Summary of results: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
 
-This repository provides access to the relevant code, ipynb files, figures and versions for the project.
+This repository provides access to the relevant code, ipynb files, figures and version histories for the project.
 
 # List of contents
 * Background context
@@ -14,19 +14,19 @@ This repository provides access to the relevant code, ipynb files, figures and v
 
 # Background context
 
-* Urban greenery, its Importance and Introduction to the project location
+* Urban greenery, its Importance and Introduction to The Project Location
 
-Urban green spaces comprise pedestrian pathways, vehicle roadways, buildings, and patches of vegetation and water. Urban green spaces can be complex to classify if pedestrian pathways are woven around naturalistic designs often featuring variable topographies. These can create shadows or complex visual features that make green spaces and roads difficult to distinguish. The use of machine learning that leverages satellite imagery could help to prevent accidents and could increase the efficiency of using automated vehicles to navigate roadways that rely on automated navigation systems. Driverless vehicle technology is currently facing significant investment in the south-eastern country of Singapore (Ng, 2021).
+Urban green spaces comprise pedestrian pathways, vehicle roadways, buildings, and patches of vegetation and water. Urban green spaces can be complex to classify if pedestrian pathways are woven around naturalistic designs often featuring variable topographies and towering skyscrapers. These objects can create shadows or complex visual features that make green spaces and roads difficult to distinguish. The use of machine learning that leverages satellite imagery could help to prevent accidents and could increase the efficiency of using automated vehicles to navigate roadways that rely on automated navigation systems. Driverless vehicle technology is currently facing significant investment in the south-eastern island country of Singapore (Ng and Kim, 2021).
 
-The Gardens by the Bay, located in the south x Nibong island of Singapore, was chosen because . It is a x project that 
-X are concerned about its life and change... It has benefits to the physical and mental health of residents and generates economoc value from its annual x million visitors/tourists. Some key features of the area include:
-* Artificial Lakes:
-* Buildings: 'Supertrees' and individual glasshouses
-* 
+The Gardens by the Bay, located in Marina Bays area of Singapore, is home to conservation projects, tourist destinations, musuems and more. It serves to foster biodiverse cityspaces and to educate people about sustainability, benefitting the physical and mental health of locals and visitors. It is an important economic source that generates revenue from its annual 45 million visitors and tourists (Yale Center for Business and the Environment, 2024). Having been a host to many redevelopment projects over the last decade, it has undergone fast change in its land surface and coastline and it faces challenges such as erosion and land subsidence due to the rising sea level associated with climate change (Bai et al., 2023). Some key features of the area include:
+* Trees, grass, bushes, shrubs and reeds: catagorised in this project as 'green spaces'.
+* Artificial Lakes: hosting a range of insects and birds such as dragonflies and hummingbirds. Lakes are often inaccessible by vehicles and people, so from now on they will be catagorised within 'green spaces'.
+* Buildings: comprising residential areas, offices, shopping malls, hotels and various tourist attractions such as museums, glasshouses and the famous artificial 'Supertrees'.
+* Roads: for the daily movement of traffic or for industrial purposes such as construction.
 
-[input close images of all these features]
 <img width="952" alt="Screenshot 2024-05-11 at 15 29 36" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/87e0e140-3a42-4fdb-911f-37b6797a977d">
 <img width="1053" alt="Screenshot 2024-05-11 at 15 31 44" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/9a4529ba-b644-4488-b219-644f0f5103b8">
+![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/2320e58a-1c44-474b-a1b6-d9917c47d4af)
 
 Evaluate increased foliage during summer that may obscure roads and create more shadows compared to winter satellite images.
 
@@ -169,8 +169,13 @@ Inspiration, code snippets, etc.
 
 ## References
 
-1. Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
-2. Ng, V. and Kim, H.M., 2021. Autonomous vehicles and smart cities: A case study of Singapore. In Smart cities for technological and social innovation (pp. 265-287). Academic Press.
+Bai, Z., Wang, Y., Li, M., Sun, Y., Zhang, X., Wu, Y., Li, Y. and Li, D., 2023. Land Subsidence in the Singapore Coastal Area with Long Time Series of TerraSAR-X SAR Data. Remote Sensing, 15(9), pp.2415.
+
+Ng, V. and Kim, H.M., 2021. Autonomous vehicles and smart cities: A case study of Singapore. In Smart cities for technological and social innovation. Academic Press, pp. 265-287.
+
+Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
+
+‌Yale Center for Business and the Environment. (2024). Marina Bay Sands. [online] Available at: https://cbey.yale.edu/research/marina-bay-sands#:~:text=Standing%20at%20water [Accessed May 2024].
 
 ‌
 
