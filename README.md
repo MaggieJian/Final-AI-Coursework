@@ -1,8 +1,8 @@
-# Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
+<img width="952" alt="Screenshot 2024-05-11 at 15 29 36" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/a73a14c0-76cc-48b0-a196-62ef76e8423e"># Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate green spaces from urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
+The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
 
-The result summarised: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
+Result summary: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
 
 This repository provides access to the relevant code, ipynb files, figures and versions for the project.
 
@@ -14,16 +14,30 @@ This repository provides access to the relevant code, ipynb files, figures and v
 
 # Background context
 
-Introduce unsupervised, K-Means clustering and green spaces
+* Urban greenery, its Importance and Introduction to the project location
 
-why are green spaces important - see jupiter
+Urban green spaces comprise pedestrian pathways, vehicle roadways, buildings, and patches of vegetation and water. Urban green spaces can be complex to classify if pedestrian pathways are woven around naturalistic designs often featuring variable topographies. These can create shadows or complex visual features that make green spaces and roads difficult to distinguish. The use of machine learning that leverages satellite imagery could help to prevent accidents and could increase the efficiency of using automated vehicles to navigate roadways that rely on automated navigation systems. Driverless vehicle technology is currently facing significant investment in the south-eastern country of Singapore (Ng, 2021).
 
+The Gardens by the Bay, located in  chosen because . It is a x project that 
+X are concerned about its life and change... It has benefits to the physical and mental health of residents and generates economoc value from its annual x million visitors/tourists. Some key features of the area include:
+* Artificial Lakes:
+* Buildings: 'Supertrees' and individual glasshouses
+* 
+
+[input close images of all these features]
+<img width="952" alt="Screenshot 2024-05-11 at 15 29 36" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/87e0e140-3a42-4fdb-911f-37b6797a977d">
+<img width="1053" alt="Screenshot 2024-05-11 at 15 31 44" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/9a4529ba-b644-4488-b219-644f0f5103b8">
+
+Evaluate increased foliage during summer that may obscure roads and create more shadows compared to winter satellite images.
+
+* Copernicus, Sentinel-2 and IRIS
+  
 Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It was developed by the ESA-Phil lab, is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and the European Environmental Agency (EEA). Currently it retrieves data from a satellite constellation series mostly comprised of the Sentinel satellites to monitor air and water quality and to observe land use change, climate change and nataural disasters.
 Sentinel-2 is
 IRIS is a recent annotation tool developed over the past 4 years and aimed to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
-The Gardens by the Bay in the south-eastern country of Singapore was chosen because . It is a x project that 
-X are concerned about its life and change...
+* AI Background
+Introduce unsupervised, K-Means clustering
 
 # Methodology:
 
@@ -156,6 +170,7 @@ Inspiration, code snippets, etc.
 ## References
 
 1. Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
+2. Ng, V. and Kim, H.M., 2021. Autonomous vehicles and smart cities: A case study of Singapore. In Smart cities for technological and social innovation (pp. 265-287). Academic Press.
 
 ‌
 
