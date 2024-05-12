@@ -18,7 +18,7 @@ This repository provides access to the relevant code, ipynb files, figures and v
 
 Urban green spaces comprise pedestrian pathways, vehicle roadways, buildings, and patches of vegetation and water. Urban green spaces can be complex to classify if pedestrian pathways are woven around naturalistic designs often featuring variable topographies and towering skyscrapers. These objects can create shadows or complex visual features that make green spaces and roads difficult to distinguish. The use of machine learning that leverages satellite imagery could help to prevent accidents and could increase the efficiency of using automated vehicles to navigate roadways that rely on automated navigation systems. Driverless vehicle technology is currently facing significant investment in the south-eastern island country of Singapore (Ng and Kim, 2021).
 
-The Gardens by the Bay, located in Marina Bays area of Singapore, is home to conservation projects, tourist destinations, musuems and more. It serves to foster biodiverse cityspaces and to educate people about sustainability, benefitting the physical and mental health of locals and visitors. It is an important economic source that generates revenue from its annual 45 million visitors and tourists (Yale Center for Business and the Environment, 2024). Having been a host to many redevelopment projects over the last decade, it has undergone fast change in its land surface and coastline and it faces challenges such as erosion and land subsidence due to the rising sea level associated with climate change (Bai et al., 2023). Some key features of the area include:
+The Gardens by the Bay, located in Marina Bays area of Singapore, is home to conservation projects, tourist destinations, musuems and more. It is a diverse piece of land that serves to foster biodiverse cityspaces and to educate people about sustainability, benefitting the physical and mental health of locals and visitors. It is also an important economic source that generates revenue from its annual 45 million visitors and tourists (Yale Center for Business and the Environment, 2024). Having been a host to many redevelopment projects over the last decade, it has undergone fast changes to its land surface and coastline and faces challenges such as erosion and land subsidence due to the rising sea level associated with climate change, or the loss of vegetation due to fluctuating rainfall intensity (Bai et al., 2023). Changes to its land features can threaten local species populations and decrease the ability of plants to absorb CO2 from the densely populated city. These key features include:
 * Trees, grass, bushes, shrubs and reeds: catagorised in this project as 'green spaces'.
 * Artificial Lakes: hosting a range of insects and birds such as dragonflies and hummingbirds. Lakes are often inaccessible by vehicles and people, so from now on they will be catagorised within 'green spaces'.
 * Buildings: comprising residential areas, offices, shopping malls, hotels and various tourist attractions such as museums, glasshouses and the famous artificial 'Supertrees'.
@@ -39,27 +39,81 @@ IRIS is a recent annotation tool developed over the past 4 years and aimed to ma
 * AI Background
 Introduce unsupervised, K-Means clustering
 
+Google Colaboratory 
+
 # Methodology:
 
 Step 1: Data Collection
 
-The image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
+The raw image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
 
 Using Copernicus, draw a polygon using the ? function to select the area of interest. For the coorodinates [name them], 4 co-located images from the satellite were found.
 
 <img width="1036" alt="Screenshot 2024-05-10 at 20 04 43" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/15694c72-e2c2-45a3-9f91-bc677c89fcd5">
 
-Step 2: Docker was used to open the IRIS framework
+The images retrieved from Copernicus that were used in this project are attached in the repository. They can also be accessed via this drive:
 
-Installing Iris directly from the GitHub repository can be time-consuming and complicated, because of the manual installation of dependencies and configuration steps. Users of the 'Docker' software can quickly bring IRIS into a centralised environment by streamlining the deployment and running process, fostering collaboration across multiple devices.
+Step 2: Use Docker to open IRIS
+
+Installing Iris directly from the GitHub repository can be time-consuming and complicated, because of the manual installation of dependencies and configuration steps. Instead, users of the 'Docker' software can quickly bring IRIS into a centralised environment by streamlining the deployment and running processes and fostering collaboration across multiple devices.
 
 Download Docker: https://docs.docker.com/get-docker/
 
-Create a Docker Account (Optional): https://hub.docker.com/ (this step for those who may want to manage large sets of images and repositories via Docker Hub)
+An optional step is to create a Docker Account (this step for those who may want to manage large sets of images and repositories via Docker Hub): https://hub.docker.com/
 
-To create ingest satellite imagery within the IRIS framework, pull the image via the Mac OS's Terminal application. 
+To pull the IRIS Docker image from Docker Hub, input the following code into your computer terminal or command prompt. 
+
+```
+docker pull totony4real/iris:1.0
+```
+
+Upon a successful download, the terminal should return a statement of progress
+SCREENSHOT THE RESULT
+
+After completing this step, you can run the Iris Docker container and access the Iris web interface.
 
 Step 3: Training using IRIS semi-supervised classification
+
+Using IRIS, access the downloaded satellite images by running IRIS via Docker.
+
+The x files have been stored in the Google Drive in Step 1. Download these files and upload onto your own Google drive.
+
+Replace `path_to_data` with the new path to your data.
+
+```
+docker run -p 80:5000 -v path_to_data:/dataset/ --rm -it totony4real/iris:1.0
+label /dataset/MYPROJECTDATA.json
+```
+The terminal will return a request for you to set an admin password.
+![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/e5f3fd31-dd51-4c6d-9e63-17b543a3263c)
+After setting an admin password, the following message will be returned on the terminal.
+![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/8d755bb6-9c79-4d82-9305-ce629bc51872)
+To open IRIS on the web browser, use the following link: http://localhost:80. For example, if the terminal directs you to use http://127.0.0.1:5000, follow http://127.0.0.1:80 instead.
+![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/4e84bde0-2b7b-4810-b62a-8f0ba04967e5)
+New users will need to register for an IRIS account instead of logging in.
+![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/0d0f5946-ec55-4f92-a2a6-386679a5e56d)
+Complete the process by choosing and filling in your details. Click Register to be taken to a interface page that is ready with your image to begin your session.
+
+[screenshot]
+
+Tips for using IRIS (Tsamados and Chen, 2022):
+
+**Use the Pencil Tool**
+You can use the pencil tool to paint pixels anywhere within the rectangular region marked by red dotted lines. You can zoom in or out of the image by using the mouse scroll wheel or by using two fingers to swipe up or down on the touchpad. This allows you to adjust the image size according to your preference.
+
+**Change the Cursor Size**
+To change the cursor size, you can hold the Shift key while using the mouse scroll wheel or swiping up or down with two fingers on the touchpad. This action will increase or decrease the size of the cursor, allowing you to adjust it to your desired size.
+
+**Perform Classification**
+Once you have finished painting all the classes needed, IRIS is ready to perform classification and generate output masks.
+
+**Show Drawn Pixels**
+You can use the “Show Drawn Pixels” button to display only the pixels that you have drawn. This allows you to see which parts have been classified and processed by IRIS.
+
+**Save the Output Masks**
+To save the output masks generated by IRIS, you can click on the ‘Save’ button located at the top of the page. The output masks will be saved in the same folder that contains your data and config file. You can navigate to that folder on your device to locate the saved masks. You are also able to find the corresponding numpy arrays of the saved mask, which may be useful for further analysis.
+
+Mask  creation and download: the coordinates to access the location in this project are provided in the config.json file. EDIT THIS
 
 Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
 
@@ -172,6 +226,8 @@ Inspiration, code snippets, etc.
 Bai, Z., Wang, Y., Li, M., Sun, Y., Zhang, X., Wu, Y., Li, Y. and Li, D., 2023. Land Subsidence in the Singapore Coastal Area with Long Time Series of TerraSAR-X SAR Data. Remote Sensing, 15(9), pp.2415.
 
 Ng, V. and Kim, H.M., 2021. Autonomous vehicles and smart cities: A case study of Singapore. In Smart cities for technological and social innovation. Academic Press, pp. 265-287.
+
+Tsamados, M. and Chen, W. (2022). Introduction to Intelligently Reinforced Image Segmentation (IRIS) — GEOL0069 Guide Book. [online] Available at: https://cpomucl.github.io/GEOL0069-AI4EO/Chapter%201%3AIRIS.html [Accessed 12 May 2024].
 
 Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
 
