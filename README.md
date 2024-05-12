@@ -81,7 +81,7 @@ docker pull totony4real/iris:1.0
 ```
 
 Upon a successful download, the terminal should return a statement of progress
-SCREENSHOT THE RESULT
+<img width="723" alt="Screenshot 2024-05-12 at 21 39 52" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/49db5b3a-d631-405f-9576-a5a706b6db08">
 
 After completing this step, you can run the Iris Docker container and access the Iris web interface.
 
