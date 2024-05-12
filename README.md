@@ -39,7 +39,7 @@ IRIS is a recent annotation tool developed over the past 4 years and aimed to ma
 * AI Background
 Introduce unsupervised, K-Means clustering
 
-Google Colaboratory 
+Google Colaboratory (Google Colab in short) 
 
 # Methodology:
 
@@ -47,13 +47,26 @@ Step 1: Data Collection
 
 The raw image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
 
-Using Copernicus, draw a polygon using the ? function to select the area of interest. For the coorodinates [name them], 4 co-located images from the satellite were found.
+* Using Copernicus, search for the location and filter for Sentinel-2 LC1 by ticking on the boxes in the left.
+* Set the dates of interest.
+* Select the pencil icon in the top right to draw a polygon around the area of interest.
 
+<img width="1168" alt="Screenshot 2024-05-12 at 13 07 34" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/76c7ef37-ad08-42f6-b668-6b0840328486">
+
+For the coorodinates [name them], 4 co-located images from the satellite were found.
+
+Here is an example of a polygon with 4 collocated satellite images
 <img width="1036" alt="Screenshot 2024-05-10 at 20 04 43" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/15694c72-e2c2-45a3-9f91-bc677c89fcd5">
 
-The images retrieved from Copernicus that were used in this project are attached in the repository. They can also be accessed via this drive:
+The images retrieved from Copernicus may in .zip format, requiring unzipping via your Mac's Finder application or Windows explorer.
 
-Step 2: Use Docker to open IRIS
+The Copernicus folder that was downloaded for this project is attached in the repository. The JP2 files can also be accessed via this drive: [https://drive.google.com/drive/folders/11u9kGHtYlGD9zqmOu3e1ao4lNWym2Rni?usp=drive_link](URL)
+
+Step 2: Convert Copernicus' .JP2 files to .NPY files
+
+Open the Google Colab file that contains the code to convert the files from .JP2 to .NPY for the next step of this project: [https://drive.google.com/drive/folders/11u9kGHtYlGD9zqmOu3e1ao4lNWym2Rni?usp=drive_link](URL)
+
+Step 3: Use Docker to open IRIS
 
 Installing Iris directly from the GitHub repository can be time-consuming and complicated, because of the manual installation of dependencies and configuration steps. Instead, users of the 'Docker' software can quickly bring IRIS into a centralised environment by streamlining the deployment and running processes and fostering collaboration across multiple devices.
 
@@ -72,18 +85,20 @@ SCREENSHOT THE RESULT
 
 After completing this step, you can run the Iris Docker container and access the Iris web interface.
 
-Step 3: Training using IRIS semi-supervised classification
+Step 4: Training using IRIS semi-supervised classification
 
 Using IRIS, access the downloaded satellite images by running IRIS via Docker.
 
-The x files have been stored in the Google Drive in Step 1. Download these files and upload onto your own Google drive.
+The .npy files have been stored in the Google Drive in Step 1 ([https://drive.google.com/drive/folders/14fcnGgxK6N6TL7fJLSruuFoRQWwY0y5V?usp=drive_link](URL). Download this folder and upload onto your own Google drive.
 
 Replace `path_to_data` with the new path to your data.
 
 ```
-docker run -p 80:5000 -v path_to_data:/dataset/ --rm -it totony4real/iris:1.0
-label /dataset/MYPROJECTDATA.json
+docker run -p 80:5000 -v/path_to_data:/dataset/ --rm -it totony4real/iris:1.0
+label /dataset/MYCONFIG.json
 ```
+Example: docker run -p 80:5000 -v/Users/maggiejian/AI4EO/IRIS_upload_files:/dataset/ --rm -it totony4real/iris:1.0 label /dataset/MYCONFIG.json
+
 The terminal will return a request for you to set an admin password.
 ![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/e5f3fd31-dd51-4c6d-9e63-17b543a3263c)
 After setting an admin password, the following message will be returned on the terminal.
@@ -117,7 +132,7 @@ Mask  creation and download: the coordinates to access the location in this proj
 
 Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
 
-Step 4: Model comparison with ML techniques
+Step 5: Model comparison with ML techniques
 
 Unsupervised K-means clustering 
 
