@@ -97,7 +97,7 @@ Replace `path_to_data` with the new path to your data.
 docker run -p 80:5000 -v/path_to_data:/dataset/ --rm -it totony4real/iris:1.0
 label /dataset/MYCONFIG.json
 ```
-Example: docker run -p 80:5000 -v/Users/maggiejian/AI4EO/IRIS_upload_files:/dataset/ --rm -it totony4real/iris:1.0 label /dataset/MYCONFIG.json
+Example: docker run -p 80:5000 -v/Users/maggiejian/Downloads/IRIS_upload_files:/dataset/ --rm -it totony4real/iris:1.0 label /dataset/MYCONFIG.json
 
 The terminal will return a request for you to set an admin password.
 ![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/e5f3fd31-dd51-4c6d-9e63-17b543a3263c)
