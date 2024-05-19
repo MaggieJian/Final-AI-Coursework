@@ -1,34 +1,36 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications requiring more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
+The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
 
-Summary of results: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification.
+Summary of the results: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification, based on a confusion matrix 
 
 This repository provides access to the relevant code, ipynb files, figures and version histories for the project.
 
 # List of contents
 * Background context
 * Methodology
+* Checklist for getting Started
 * Results and Discussion
 * References
 
 # Background context
 
-* Urban greenery, its Importance and Introduction to The Project Location
+* Urban greenery and its importance
 
-Urban green spaces comprise pedestrian pathways, vehicle roadways, buildings, and patches of vegetation and water. Urban green spaces can be complex to classify if pedestrian pathways are woven around naturalistic designs often featuring variable topographies and towering skyscrapers. These objects can create shadows or complex visual features that make green spaces and roads difficult to distinguish. The use of machine learning that leverages satellite imagery could help to prevent accidents and could increase the efficiency of using automated vehicles to navigate roadways that rely on automated navigation systems. Driverless vehicle technology is currently facing significant investment in the south-eastern island country of Singapore (Ng and Kim, 2021).
+Urban green spaces comprise pedestrian pathways, vehicle roadways, buildings, and patches of vegetation and water. Urban green spaces can be complex to classify if pedestrian pathways are woven around naturalistic designs often featuring variable topographies and towering skyscrapers. These objects can create shadows or complex visual features that make green spaces and roads difficult to distinguish. The use of machine learning in satellite imagery analysis could help to prevent accidents and could increase the efficiency of using automated vehicles to navigate roadways that rely on automated navigation systems. Driverless vehicle technology is currently facing significant investment in the south-eastern island country of Singapore (Ng and Kim, 2021).
 
-The Gardens by the Bay, located in Marina Bays area of Singapore, is home to conservation projects, tourist destinations, musuems and more. It is a diverse piece of land that serves to foster biodiverse cityspaces, to create workspaces and to educate people about sustainability, benefitting the physical and mental health of locals and visitors. It is also an important economic source that generates revenue from its annual 45 million visitors and tourists (Yale Center for Business and the Environment, 2024). Having been a host to many redevelopment projects over the last decade, it has undergone fast changes to its land surface and its coastline and it faces challenges such as erosion and land subsidence due to the rising sea level associated with climate change, or the loss of vegetation due to fluctuating rainfall intensity (Bai et al., 2023). Changes to its land features can threaten local species populations and decrease the ability of plants to absorb CO2 from the densely populated city. These key features include:
+* Introduction to The Project Location
+  
+The Gardens by the Bay, located in Marina Bays area of Singapore, is home to conservation projects, workspaces, tourism, museums and more. It is a diverse piece of land that benefits the physical and mental health of locals and visitors because it aims to foster biodiverse cityspaces that educate people about sustainability. The area is also an important economic source that generates significant revenue from its annual 45 million visitors (Yale Center for Business and the Environment, 2024). Having hosted many redevelopment projects over the last decade, it has undergone fast changes to its land surface and its coastline, alonside facing climate challenges such as erosion and land subsidence due to the rising global sea level or the loss of vegetation due to fluctuating rainfall intensity (Bai et al., 2023). Changes to its land features can threaten local species populations, decrease biodiversity and lower the ability of plants to absorb CO2 from the densely populated city.
+
+Key land features that can be visible from satellites include:
 * Trees, grass, bushes, shrubs and reeds: catagorised in this project as 'green spaces'.
-* Artificial Lakes: hosting a range of insects and birds such as dragonflies and hummingbirds. Lakes are often inaccessible by vehicles and people, so from now on they will be catagorised within 'green spaces'.
-* Buildings: comprising residential areas, offices, shopping malls, hotels and various tourist attractions such as museums, glasshouses and the famous artificial 'Supertrees'.
-* Roads: for the daily movement of traffic or for industrial purposes such as construction.
+* Artificial Lakes: also catagorised as 'green spaces', since they host a range of insects, reptiles, mammals and birds (such as dragonflies and hummingbirds) and  lakes are often inaccessible by vehicles and people.
+* Buildings: comprising residential areas, offices, shopping malls, hotels and various tourist attractions such as museums, glasshouses and the famous artificial 'Supertrees'. Classified as 'urban'.
+* Roads: for the daily movement of traffic or for industrial purposes such as construction. Classified as 'urban'.
 
 <img width="952" alt="Screenshot 2024-05-11 at 15 29 36" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/87e0e140-3a42-4fdb-911f-37b6797a977d">
 <img width="1053" alt="Screenshot 2024-05-11 at 15 31 44" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/9a4529ba-b644-4488-b219-644f0f5103b8">
-![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/2320e58a-1c44-474b-a1b6-d9917c47d4af)
-
-Evaluate increased foliage during summer that may obscure roads and create more shadows compared to winter satellite images.
 
 * Copernicus, Sentinel-2 and IRIS
   
@@ -36,10 +38,18 @@ Copernicus is a database platform that provides free access to satellite data an
 Sentinel-2 is
 IRIS is a recent annotation tool developed over the past 4 years and aimed to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
-* AI Background
+* Unsupervised learning: K-Means clustering
+
 Introduce unsupervised, K-Means clustering
 
-Google Colaboratory (Google Colab in short) 
+* Method of evaluation
+
+To compare the performance of IRIS with K, the comparison metrics will be typical of classification models. This includes accuracy, precision, recall, F1 score, support, macro average and weighted average:
+
+![arhg](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/077f0f41-b650-4d6d-b58a-886fdf12269d)
+Image credit: https://en.wikipedia.org/wiki/Precision_and_recall
+
+A confusion matrix will also help to evaluate the performance of IRIS.
 
 # Methodology:
 
@@ -65,6 +75,8 @@ The Copernicus folder that was downloaded for this project is attached in the re
 Step 2: Convert Copernicus' .JP2 files to .NPY files
 
 Open the Google Colab file that contains the code to convert the files from .JP2 to .NPY for the next step of this project: [https://drive.google.com/drive/folders/11u9kGHtYlGD9zqmOu3e1ao4lNWym2Rni?usp=drive_link](URL)
+
+Google Colaboratory (Google Colab in short) is
 
 Step 3: Use Docker to open IRIS
 
@@ -142,34 +154,8 @@ The models will be assessed for overfitting and underfitting
 
 The metric to assess this will be a loss function, also known as a cost function, which quantifies how distant a model’s predictions are from the actual values. Minimising this value of the deviation from the actual results is preferred. Common loss functions include Mean Squared Error for regression tasks and Cross-Entropy for classification tasks.
 
-# Results and Discussion
 
-After completing Steps 1-5, the resulting masks can be found below
-[screenshot]
-
-Interpretation: In addition to using IRIS the student would need to develop a notebook describing their masked images in the context of the input features and compare with other unsupervised or supervised ML techniques.
-
-After completing Steps 6- ,
-
-feedback: Could improve a little on the analysis (alignment) and provide a little more info on the general context (leads and ice) in the README
-
-## Edit from here. Description
-
-You will learn how to find lists of colocated images from pairs of collocated satellites: Sentinel-3 (300m resolution) and Sentinel-2 imagery (10m resolution) as well as collocated altimetry data from Sentinel-3. Unsupervised classification will be performed.
-
-Therefore, this project is divided into two sections:
-1) Colocating Sentinel-3 OLCI and Sentinal-2 Optical Data
-2) Unsupervised Learning
-
-To successfully classify the echoes in leads and sea ice in this project, you will produce:
-1) An average echo shape
-2) A standard deviation for these two classes
-3) A confusion matrix (to quantify echo classification against the ESA official classification)
-
-![image](https://github.com/MaggieJian/Week4/assets/160494175/3adc0b36-a221-4626-abfb-47120b3ff2f4)
-![image](https://github.com/MaggieJian/Week4/assets/160494175/d63adc99-69b7-45ea-9995-e3bd35f0ab4f)
-
-## Getting Started
+# Checklist for Getting Started
 
 ### Dependencies
 
@@ -203,6 +189,35 @@ Check: The paths should lead to the corrrect satellite images in your Google Dri
 command to run if program contains helper info
 ```
 
+# Results and Discussion
+
+After completing Steps 1-5, the resulting masks can be found below
+[screenshot]
+
+Interpretation: In addition to using IRIS the student would need to develop a notebook describing their masked images in the context of the input features and compare with other unsupervised or supervised ML techniques.
+
+After completing Steps 6- ,
+
+feedback: Could improve a little on the analysis (alignment) and provide a little more info on the general context (leads and ice) in the README
+
+## Edit from here. Description
+
+You will learn how to find lists of colocated images from pairs of collocated satellites: Sentinel-3 (300m resolution) and Sentinel-2 imagery (10m resolution) as well as collocated altimetry data from Sentinel-3. Unsupervised classification will be performed.
+
+Therefore, this project is divided into two sections:
+1) Colocating Sentinel-3 OLCI and Sentinal-2 Optical Data
+2) Unsupervised Learning
+
+To successfully classify the echoes in leads and sea ice in this project, you will produce:
+1) An average echo shape
+2) A standard deviation for these two classes
+3) A confusion matrix (to quantify echo classification against the ESA official classification)
+
+![image](https://github.com/MaggieJian/Week4/assets/160494175/3adc0b36-a221-4626-abfb-47120b3ff2f4)
+![image](https://github.com/MaggieJian/Week4/assets/160494175/d63adc99-69b7-45ea-9995-e3bd35f0ab4f)
+
+Evaluate increased foliage during summer that may obscure roads and create more shadows compared to winter satellite images.
+
 ## Author contact and help request
 
 Maggie Jian - maggie.jian.21@ucl.ac.uk
@@ -226,7 +241,7 @@ This project is not licensed
 If you use this code or data in your work, please cite it as:
 Jian, M. (2024). Week4. GitHub Repository. https://github.com/MaggieJian/Week4
 
-## Acknowledgments
+# Acknowledgments
 
 This project is part of an assignment for the module GEOL0069 (2023/24) taught in UCL Earth Sciences Department
 
@@ -236,7 +251,7 @@ Inspiration, code snippets, etc.
 [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 [dbader](https://github.com/dbader/readme-template)
 
-## References
+# References
 
 Bai, Z., Wang, Y., Li, M., Sun, Y., Zhang, X., Wu, Y., Li, Y. and Li, D., 2023. Land Subsidence in the Singapore Coastal Area with Long Time Series of TerraSAR-X SAR Data. Remote Sensing, 15(9), pp.2415.
 
