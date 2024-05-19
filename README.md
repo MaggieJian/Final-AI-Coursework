@@ -63,8 +63,6 @@ The raw image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
 
 <img width="1168" alt="Screenshot 2024-05-12 at 13 07 34" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/76c7ef37-ad08-42f6-b668-6b0840328486">
 
-For the coorodinates [name them], 4 co-located images from the satellite were found.
-
 Here is an example of a polygon with 4 collocated satellite images
 <img width="1036" alt="Screenshot 2024-05-10 at 20 04 43" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/15694c72-e2c2-45a3-9f91-bc677c89fcd5">
 
@@ -80,7 +78,7 @@ Google Colaboratory (Google Colab in short) is
 
 Step 3: Use Docker to open IRIS
 
-Installing Iris directly from the GitHub repository can be time-consuming and complicated, because of the manual installation of dependencies and configuration steps. Instead, users of the 'Docker' software can quickly bring IRIS into a centralised environment by streamlining the deployment and running processes and fostering collaboration across multiple devices.
+Installing Iris directly from the GitHub repository can be time-consuming and complicated, because of the manual installation of dependencies and configuration steps. Instead, users of Docker can quickly bring IRIS into a centralised environment by streamlining the deployment and running processes and fostering collaboration across multiple devices.
 
 Download Docker: https://docs.docker.com/get-docker/
 
