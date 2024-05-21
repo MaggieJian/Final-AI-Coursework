@@ -1,6 +1,6 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Future applications include the aerial monitoring of urban spaces to understand how they change and wear over time.
+The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Wider applications include the aerial monitoring of urban spaces to understand how they change over time.
 
 Summary of the results: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification, based on a confusion matrix 
 
@@ -34,8 +34,8 @@ Key land features that can be visible from satellites include:
 
 * Copernicus, Sentinel-2 and IRIS
   
-Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It was developed by the ESA-Phil lab, is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and the European Environmental Agency (EEA). Currently it retrieves data from a satellite constellation series mostly comprised of the Sentinel satellites to monitor air and water quality and to observe land use change, climate change and nataural disasters.
-Sentinel-2 is a satellite with 13 spectral bands, each with a resolution of either 10, 20 or 60 meters per pixel: 
+Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It was developed by the ESA-Phil lab, is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and the European Environmental Agency (EEA). Currently it retrieves data from a satellite constellation series mostly named the Sentinel satellites to monitor air and water quality and to observe land use change, climate change and nataural disasters.
+Sentinel-2 is one of the satellites with 13 spectral bands, each band with a resolution of either 10, 20 or 60 meters per pixel: 
 <img width="634" alt="Screenshot 2024-05-20 at 16 46 48" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/08574267-df79-4154-8a16-54ac56b471b6">
 Image credit: Sentinel Online, 2020
 Band 2 = Blue, Band 3 = Green, Band 4 = Red
@@ -44,7 +44,7 @@ Each band has different offsets from each other:
 <img width="422" alt="Screenshot 2024-05-20 at 16 47 58" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/def5a5d6-05c9-42ec-ba52-1e212e2f7baa">
 Image credit: Sentinel Online, 2020
 
-IRIS is a recent annotation tool developed over the past 4 years and aimed to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
+IRIS is a recent annotation tool developed over the past 4 years developed by the ESA Phil-Lab, which aims to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
 * Unsupervised learning: K-Means clustering
 
