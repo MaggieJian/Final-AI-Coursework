@@ -47,16 +47,13 @@ Image credit: Sentinel Online, 2020
 
 IRIS is a recent annotation tool developed over the past 4 years developed by the ESA Phil-Lab, which aims to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
-* Supervised learning: Vision Transformers (ViT)
+* Supervised learning: Vision Transformers (ViT), CNN and Random Forests
 
-In this project, IRIS will be used to create training and testing data for a supervised Vision Transformer model. 
+In this project, IRIS will be used to create training and testing data for a ViT model, a CNN model and a Random Forest model. 
 
-* Unsupervised learning: K-Means clustering
+Over time, more complex models have been developed. It is generally agreed that Random Forests are the most traditional of the three models, followed by the two deep learning models, CNN and ViT. ViT has only recently been used in image processing in addition to natural language processing (Uparker et al., 2023).
 
-To evaluate the performance of IRIS semi-supervised classification, this project will compare the results with a K-Means clustering model. 
-
-"Vision Transformers (ViTs) are a recent breakthrough in the field of deep learning for image processing. They depart from the traditional convolutional neural network (CNN) approach and apply transformers, which were originally designed for natural language processing tasks, to image classification.
-
+INSERT DIAGRAM
 Theoretical Foundations
 1. Tokenisation of Images
 Instead of processing images using convolutions, ViTs divide the image into fixed-size patches, linearly embed them, and then process the resulting sequence of vectors (or tokens) using a transformer.{cite}dosovitskiy2020image
@@ -301,6 +298,8 @@ Ng, V. and Kim, H.M., 2021. Autonomous vehicles and smart cities: A case study o
 Sentinel Online. (2020). MultiSpectral Instrument (MSI) Overview. European Space Agency.
 
 Tsamados, M. and Chen, W. (2022). Introduction to Intelligently Reinforced Image Segmentation (IRIS) — GEOL0069 Guide Book. [online] Available at: https://cpomucl.github.io/GEOL0069-AI4EO/Chapter%201%3AIRIS.html [Accessed 12 May 2024].
+
+Uparkar, O., Bharti, J., Pateriya, R.K., Gupta, R.K. and Sharma, A. (2023). Vision transformer outperforms deep convolutional neural network-based model in classifying X-ray images. Procedia Computer Science, 218, pp.2338-2349.
 
 Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
 
