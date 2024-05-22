@@ -1,8 +1,8 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
 
-The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in comparison to supervised/unsupervised ML methods. The project can be used for a wide range of applications that require more efficient surface classifications. Wider applications include the aerial monitoring of urban spaces to understand how they change over time.
+The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in a Vision Transformer model (ViT) in comparison to Convolutional Neural Networks (CNN) and Random Forest supervised models (further detail below). The project can be used for a wide range of applications that require more efficient surface classifications. Wider applications include the aerial monitoring of urban spaces to understand how they change over time.
 
-Summary of the results: semi-supervised learning produced a more accurate [x value] than the supervised/unsupervised ML method of surface classification, based on a confusion matrix 
+Summary of the results: The ViT model produced a better cross-validation score and was favoured in the model selection compared to the CNN and Random Forest models
 
 This repository provides access to the relevant code, ipynb files, figures and version histories for the project.
 
@@ -37,22 +37,58 @@ Key land features that can be visible from satellites include:
 Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It was developed by the ESA-Phil lab, is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and the European Environmental Agency (EEA). Currently it retrieves data from a satellite constellation series mostly named the Sentinel satellites to monitor air and water quality and to observe land use change, climate change and nataural disasters.
 Sentinel-2 is one of the satellites with 13 spectral bands, each band with a resolution of either 10, 20 or 60 meters per pixel: 
 <img width="634" alt="Screenshot 2024-05-20 at 16 46 48" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/08574267-df79-4154-8a16-54ac56b471b6">
+
 Image credit: Sentinel Online, 2020
 Band 2 = Blue, Band 3 = Green, Band 4 = Red
 
 Each band has different offsets from each other:
 <img width="422" alt="Screenshot 2024-05-20 at 16 47 58" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/def5a5d6-05c9-42ec-ba52-1e212e2f7baa">
+
 Image credit: Sentinel Online, 2020
 
 IRIS is a recent annotation tool developed over the past 4 years developed by the ESA Phil-Lab, which aims to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
+* Supervised learning: Vision Transformers (ViT)
+
+In this project, IRIS will be used to create training and testing data for a supervised Vision Transformer model. 
+
 * Unsupervised learning: K-Means clustering
 
-Introduce unsupervised, K-Means clustering
+To evaluate the performance of IRIS semi-supervised classification, this project will compare the results with a K-Means clustering model. 
+
+"Vision Transformers (ViTs) are a recent breakthrough in the field of deep learning for image processing. They depart from the traditional convolutional neural network (CNN) approach and apply transformers, which were originally designed for natural language processing tasks, to image classification.
+
+Theoretical Foundations
+1. Tokenisation of Images
+Instead of processing images using convolutions, ViTs divide the image into fixed-size patches, linearly embed them, and then process the resulting sequence of vectors (or tokens) using a transformer.{cite}dosovitskiy2020image
+
+2. Position Embeddings
+Since the original transformer doesn't have a notion of the relative positions of tokens, positional embeddings are added to the patch embeddings to retain the positional information.{cite}dosovitskiy2020image
+
+3. Transformer Architecture
+The core of ViT is the transformer architecture, which consists of multiple layers of multi-head self-attention mechanisms and feed-forward neural networks.{cite}dosovitskiy2020image
+
+4. Classification Head
+After processing through the transformer layers, the embedding of the first token (often referred to as the 'CLS' token) is used to classify the image.{cite}dosovitskiy2020image
+
+Advantages of ViT
+Model Transferability: ViTs pre-trained on large datasets can be fine-tuned on smaller datasets, achieving high performance even when the available labeled data is limited.
+
+Scalability: ViTs are more data-hungry compared to CNNs. However, their performance continues to improve as the model size and the amount of data increase, often surpassing other architectures.
+
+Flexibility: The transformer architecture isn't specialized for grid-like data (like images), making ViTs potentially more flexible for varied input data types.
+
+Challenges
+Computational Demand: ViTs can be computationally intensive, especially when dealing with large images or when the model has many layers.
+
+Data Requirement: To achieve optimal performance, ViTs often require more training data compared to CNNs.
+
+Implementation
+The implmentation of Vision Transformer is much more complicated than CNN and Random Forest as there is no built-in functions or layers in the library. However, the following code uses some existing functions like Muliti-head attention to build the transformer block. You don't need to know the exactly and detailed structure of ViT as it is not required in this course. Please follow the code below for example of implementation."
 
 * Method of evaluation
 
-To compare the performance of IRIS with K, the comparison metrics will be typical of classification models. This includes accuracy, precision, recall, F1 score, support, macro average and weighted average:
+To compare the performance of IRIS with ViT, the comparison metrics will be typical of classification models. This includes accuracy, precision, recall, F1 score, support, macro average and weighted average:
 
 ![arhg](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/077f0f41-b650-4d6d-b58a-886fdf12269d)
 Image credit: https://en.wikipedia.org/wiki/Precision_and_recall
