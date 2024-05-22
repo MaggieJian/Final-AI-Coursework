@@ -37,7 +37,6 @@ Key land features that can be visible from satellites include:
 Copernicus is a database platform that provides free access to satellite data and imagery that is close to real time. It was developed by the ESA-Phil lab, is managed by the European Commision and is contributed to by the Euporean Space Agency (ESA) and the European Environmental Agency (EEA). Currently it retrieves data from a satellite constellation series mostly named the Sentinel satellites to monitor air and water quality and to observe land use change, climate change and nataural disasters.
 Sentinel-2 is one of the satellites with 13 spectral bands, each band with a resolution of either 10, 20 or 60 meters per pixel: 
 <img width="634" alt="Screenshot 2024-05-20 at 16 46 48" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/08574267-df79-4154-8a16-54ac56b471b6">
-
 Image credit: Sentinel Online, 2020
 Band 2 = Blue, Band 3 = Green, Band 4 = Red
 
