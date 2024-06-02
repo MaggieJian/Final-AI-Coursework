@@ -1,4 +1,5 @@
 # Surface Classification of Urban Cities using IRIS and Sentinel-2 Data
+![kimage](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/9aad64a2-d1d1-4440-bc3a-3f1295b17c10)
 
 The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS in a Vision Transformer model (ViT) in comparison to Convolutional Neural Networks (CNN) and Random Forest supervised models (further detail below). The project can be used for a wide range of applications that require more efficient surface classifications. Wider applications include the aerial monitoring of urban spaces to understand how they change over time.
 
@@ -159,7 +160,8 @@ New users will need to register for an IRIS account instead of logging in.
 ![image](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/0d0f5946-ec55-4f92-a2a6-386679a5e56d)
 Complete the process by choosing and filling in your details. Click Register to be taken to a interface page that is ready with your image to begin your session.
 
-[screenshot]
+Work on a specific area of the image:
+<img width="404" alt="Satellite view of mask area" src="https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/b96dd7a7-2ddc-40f2-a23c-5b81ffef91c6">
 
 Tips for using IRIS (Tsamados and Chen, 2022):
 
