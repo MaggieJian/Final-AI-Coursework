@@ -8,6 +8,8 @@ Summary of the results: The ViT model produced a better cross-validation score a
 
 This repository provides access to the relevant code, ipynb files, figures and version histories for the project.
 
+Google Drive with relevant files: 
+
 # List of contents
 * Background context
 * Methodology
@@ -47,6 +49,8 @@ Each band has different offsets from each other:
 
 Image credit: Sentinel Online, 2020
 
+INSERT FIGURE 1
+
 IRIS is a recent annotation tool developed over the past 4 years developed by the ESA Phil-Lab, which aims to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
 * Supervised learning: Vision Transformers (ViT), CNN and Random Forests
@@ -55,7 +59,10 @@ In this project, IRIS will be used to create training and testing data for a ViT
 
 Over time, more complex models have been developed. It is generally agreed that Random Forests are the most traditional of the three models, followed by the two deep learning models, CNN and ViT. ViT has only recently been used in image processing in addition to natural language processing (Uparker et al., 2023).
 
-INSERT DIAGRAM
+INSERT FIGURE 2
+
+Steps of ViT model:
+
 Theoretical Foundations
 1. Tokenisation of Images
 Instead of processing images using convolutions, ViTs divide the image into fixed-size patches, linearly embed them, and then process the resulting sequence of vectors (or tokens) using a transformer.{cite}dosovitskiy2020image
@@ -69,20 +76,23 @@ The core of ViT is the transformer architecture, which consists of multiple laye
 4. Classification Head
 After processing through the transformer layers, the embedding of the first token (often referred to as the 'CLS' token) is used to classify the image.{cite}dosovitskiy2020image
 
-Advantages of ViT
-Model Transferability: ViTs pre-trained on large datasets can be fine-tuned on smaller datasets, achieving high performance even when the available labeled data is limited.
+Advantages of ViT:
 
-Scalability: ViTs are more data-hungry compared to CNNs. However, their performance continues to improve as the model size and the amount of data increase, often surpassing other architectures.
+1. Model Transferability - ViTs pre-trained on large datasets can be fine-tuned on smaller datasets, achieving high performance even when the available labeled data is limited.
 
-Flexibility: The transformer architecture isn't specialized for grid-like data (like images), making ViTs potentially more flexible for varied input data types.
+2. Scalability - ViTs are more data-hungry compared to CNNs. However, their performance continues to improve as the model size and the amount of data increase, often surpassing other architectures.
 
-Challenges
-Computational Demand: ViTs can be computationally intensive, especially when dealing with large images or when the model has many layers.
+3. Flexibility - The transformer architecture isn't specialized for grid-like data (like images), making ViTs potentially more flexible for varied input data types.
 
-Data Requirement: To achieve optimal performance, ViTs often require more training data compared to CNNs.
+Challenges:
 
-Implementation
-The implmentation of Vision Transformer is much more complicated than CNN and Random Forest as there is no built-in functions or layers in the library. However, the following code uses some existing functions like Muliti-head attention to build the transformer block. You don't need to know the exactly and detailed structure of ViT as it is not required in this course. Please follow the code below for example of implementation."
+1. Computational Demand - ViTs can be computationally intensive, especially when dealing with large images or when the model has many layers.
+
+2. Data Requirement - To achieve optimal performance, ViTs often require more training data compared to CNNs.
+
+Implementation:
+
+The implmentation of Vision Transformer is much more complicated than CNN and Random Forest as there is no built-in functions or layers in the library.
 
 * Method of evaluation
 
@@ -197,6 +207,7 @@ Step 6: Model evaluation
 The models will be assessed for overfitting and underfitting 
 
 The metric to assess this will be a loss function, also known as a cost function, which quantifies how distant a model’s predictions are from the actual values. Minimising this value of the deviation from the actual results is preferred. Common loss functions include Mean Squared Error for regression tasks and Cross-Entropy for classification tasks.
+
 
 Extension: Unsupervised learning model
 
