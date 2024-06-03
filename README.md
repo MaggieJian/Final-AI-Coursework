@@ -262,7 +262,7 @@ Extension: Unsupervised learning model
 
 K-means clustering was used to visualise the Sentinel-2 satellite image without IRIS.
 
-This was produced using the colab file titled 'Unsupervised_learning.ipynb'.
+Use the colab file titled 'Unsupervised_learning.ipynb'.
 
 # Checklist for Getting Started
 
@@ -306,30 +306,15 @@ The mask created in this project is below:
 ![5577E711-A665-4CC6-842F-0398D135C962_1_201_a](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/18d634b0-b701-4323-b8f7-b9c622f0b83c)
 
 Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
+Note that during summer when this Sentinel-2 data was collected, increased foliage may have obscured the roads and created more shadows compared to in the winter.
 
 After completing the extension, the following result was produced.
 
 ![kimage](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/9aad64a2-d1d1-4440-bc3a-3f1295b17c10)
 
-
-![image](https://github.com/MaggieJian/Week4/assets/160494175/3adc0b36-a221-4626-abfb-47120b3ff2f4)
-![image](https://github.com/MaggieJian/Week4/assets/160494175/d63adc99-69b7-45ea-9995-e3bd35f0ab4f)
-
-Evaluate increased foliage during summer that may obscure roads and create more shadows compared to winter satellite images.
-
 ## Author contact and help request
 
 Maggie Jian - maggie.jian.21@ucl.ac.uk
-
-Project link - https://github.com/MaggieJian/Week4
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
 
 ## License
 
@@ -338,13 +323,13 @@ This project is not licensed
 ## How to Cite
 
 If you use this code or data in your work, please cite it as:
-Jian, M. (2024). Week4. GitHub Repository. https://github.com/MaggieJian/Week4
+Jian, M. (2024). Final AI Coursework. GitHub Repository. https://github.com/MaggieJian/Week4
 
 # Acknowledgments
 
-This project is part of an assignment for the module GEOL0069 (2023/24) taught in UCL Earth Sciences Department
+This project is part of an assignment for the module GEOL0069 (2023/24) taught in thr Earth Sciences Department of University College London. Thank you to the module leaders and staff.
 
-Inspiration, code snippets, etc.
+Inspiration and code snippets from:
 [GEOL0069 Jupyter Notebook] (https://cpomucl.github.io/GEOL0069-AI4EO/intro.html)
 [awesome-readme](https://github.com/matiassingers/awesome-readme)
 [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
@@ -356,6 +341,10 @@ Bai, Z., Wang, Y., Li, M., Sun, Y., Zhang, X., Wu, Y., Li, Y. and Li, D., 2023. 
 
 Ng, V. and Kim, H.M., 2021. Autonomous vehicles and smart cities: A case study of Singapore. In Smart cities for technological and social innovation. Academic Press, pp. 265-287.
 
+Oyekola, M.A. and Adewuyi, G.K. (2018). 'Unsupervised classification in land cover types using remote sensing and GIS techniques'. International Journal of Science and Engineering Investigations, 7(72), pp.11-18.
+
+Patro, R.N., Subudhi, S., Biswal, P.K. and Dell’acqua, F. (2021). 'A review of unsupervised band selection techniques: Land cover classification for hyperspectral earth observation data'. IEEE Geoscience and Remote Sensing Magazine, 9(3), pp.72-111.
+
 Sentinel Online. (2020). MultiSpectral Instrument (MSI) Overview. European Space Agency.
 
 Tsamados, M. and Chen, W. (2022). Introduction to Intelligently Reinforced Image Segmentation (IRIS) — GEOL0069 Guide Book. [online] Available at: https://cpomucl.github.io/GEOL0069-AI4EO/Chapter%201%3AIRIS.html [Accessed 12 May 2024].
@@ -365,13 +354,3 @@ Uparkar, O., Bharti, J., Pateriya, R.K., Gupta, R.K. and Sharma, A. (2023). Visi
 Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
 
 ‌Yale Center for Business and the Environment. (2024). Marina Bay Sands. [online] Available at: https://cbey.yale.edu/research/marina-bay-sands#:~:text=Standing%20at%20water [Accessed May 2024].
-
-‌
-
-  
-3. Seeger, M. (2004). 'Gaussian processes for machine learning'. International journal of neural systems, 14(02), pp.69-106.
-4. Oyekola, M.A. and Adewuyi, G.K. (2018). 'Unsupervised classification in land cover types using remote sensing and GIS techniques'. International Journal of Science and Engineering Investigations, 7(72), pp.11-18.
-5. Patro, R.N., Subudhi, S., Biswal, P.K. and Dell’acqua, F. (2021). 'A review of unsupervised band selection techniques: Land cover classification for hyperspectral earth observation data'. IEEE Geoscience and Remote Sensing Magazine, 9(3), pp.72-111.
-6. Camps-Valls, G., Martino, L., Svendsen, D.H., Campos-Taberner, M., Muñoz-Marí, J., Laparra, V., Luengo, D. and García-Haro, F.J. (2018). 'Physics-aware Gaussian processes in remote sensing'. Applied Soft Computing, 68, pp.69-82.
-7. Chen, W., Tsamados, M., Willatt, R., Brockley, D., Deisenroth, M., De Rijke-Thomas, C., Francis, A., Hirata, L., Johnson, T., Lawrence, I. and Landy, J. (2024). 'Co-located OLCI optical imagery and SAR altimetry from Sentinel-3 for enhanced surface classification in sea ice (No. EGU24-9175)'. Copernicus Meetings.
-8. Wang, Q., Shi, W., Li, Z. and Atkinson, P.M. (2016). 'Fusion of Sentinel-2 images'. Remote sensing of environment, 187, pp.241-252.
