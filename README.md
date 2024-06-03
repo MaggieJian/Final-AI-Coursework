@@ -8,7 +8,8 @@ Summary of the results: The ViT model produced a better cross-validation score a
 
 This repository provides access to the relevant code, ipynb files, figures and version histories for the project.
 
-Google Drive containing relevant files: https://drive.google.com/drive/folders/11u9kGHtYlGD9zqmOu3e1ao4lNWym2Rni?usp=drive_link] [URL]
+Google Drive containing relevant files: 
+?usp=drive_link] [https://drive.google.com/drive/folders/1WH1KuUP78N7FZJCxplrzYwh-vaavqLaT]
 
 # List of contents
 * Background context
