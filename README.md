@@ -249,22 +249,21 @@ The mask created in this project is below:
 
 Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
 
-Step 5: Model comparison with ML techniques
-
-Unsupervised K-means clustering 
-
-Step 6: Model evaluation
+Step 5: Model evaluation
 
 The models will be assessed for overfitting and underfitting 
 
 The metric to assess this will be a loss function, also known as a cost function, which quantifies how distant a model’s predictions are from the actual values. Minimising this value of the deviation from the actual results is preferred. Common loss functions include Mean Squared Error for regression tasks and Cross-Entropy for classification tasks.
 
+The colab file to do this is named 'Comparing_supervised_learning_classification_models.ipynb'.
 
 Extension: Unsupervised learning model
 
+K-means clustering was used to visualise the Sentinel-2 satellite image without IRIS.
+
 ![kimage](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/9aad64a2-d1d1-4440-bc3a-3f1295b17c10)
 
-Open the colab file titled 'Unsupervised_learning.ipny'.
+This was produced using the colab file titled 'Unsupervised_learning.ipynb'.
 
 # Checklist for Getting Started
 
