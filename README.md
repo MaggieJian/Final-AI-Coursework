@@ -95,16 +95,20 @@ Random Forest is a notable and significant part of machine learning and is commo
 
 1. Ensemble Learning
 
-Ensemble methods employ multiple learning algorithms to achieve better predictive performance than any individual learning algorithm alone {cite}dietterich2000ensemble. The primary principle behind ensemble models is that several weak learners come together to form a strong learner.
+EL methods employ multiple learning algorithms to achieve better predictive performance than any individual learning algorithm alone {cite}dietterich2000ensemble. The primary principle behind ensemble models is that several weak learners come together to form a strong learner.
+
 2. Decision Trees
 
 Decision trees are central to a Random Forest. They split data into subsets based on feature values, recursively producing a decision tree {cite}quinlan1986induction.
+
 3. Bootstrap Aggregating (Bagging)
 
 Random Forests leverage bagging, where multiple dataset subsets are created by drawing samples with replacement. A separate decision tree is built for each of these samples {cite}breiman1996bagging.
+
 4. Feature Randomness
 
 In conventional decision trees, the best feature is chosen to split data at every node. However, Random Forests introduce randomness by selecting a random set of features, then choosing the best split from this subset, ensuring a diverse ensemble of trees.
+
 Advantages
 
 Generalisation: By combining the predictions of multiple trees, Random Forests tend to generalize better and are less susceptible to overfitting on training data.
@@ -112,7 +116,7 @@ Parallel Processing: Each decision tree can be built independently, allowing for
 Handling Missing Values: Random Forests can handle missing values and still produce reasonable predictions.
 Importance Scoring: They provide an importance score for each feature, aiding in feature selection or interpretability.
 
-Steps of ViT model:
+Steps of ViT model
 
 Theoretical Foundations
 1. Tokenisation of Images
@@ -127,7 +131,7 @@ The core of ViT is the transformer architecture, which consists of multiple laye
 4. Classification Head
 After processing through the transformer layers, the embedding of the first token (often referred to as the 'CLS' token) is used to classify the image.{cite}dosovitskiy2020image
 
-Advantages of ViT:
+Advantages of ViT
 
 1. Model Transferability - ViTs pre-trained on large datasets can be fine-tuned on smaller datasets, achieving high performance even when the available labeled data is limited.
 
@@ -135,13 +139,13 @@ Advantages of ViT:
 
 3. Flexibility - The transformer architecture isn't specialized for grid-like data (like images), making ViTs potentially more flexible for varied input data types.
 
-Challenges:
+Challenges
 
 1. Computational Demand - ViTs can be computationally intensive, especially when dealing with large images or when the model has many layers.
 
 2. Data Requirement - To achieve optimal performance, ViTs often require more training data compared to CNNs.
 
-Implementation:
+Implementation
 
 The implmentation of Vision Transformer is much more complicated than CNN and Random Forest as there is no built-in functions or layers in the library.
 
@@ -158,7 +162,7 @@ A confusion matrix will also help to evaluate the performance of IRIS.
 
 Step 1: Data Collection
 
-The raw image data of Sentinel-2 can be retrieved using Copernicus v1.10.1.
+Raw Sentinel-2 image data can be retrieved using Copernicus v1.10.1.
 
 * Using Copernicus, search for the location and filter for Sentinel-2 LC1 by ticking on the boxes in the left.
 * Set the dates of interest.
