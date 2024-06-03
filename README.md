@@ -323,7 +323,7 @@ This project is not licensed
 ## How to Cite
 
 If you use this code or data in your work, please cite it as:
-Jian, M. (2024). Final AI Coursework. GitHub Repository. https://github.com/MaggieJian/Week4
+Jian, M. (2024). Final AI Coursework. GitHub Repository. https://github.com/MaggieJian/Final-AI-Coursework
 
 # Acknowledgments
 
