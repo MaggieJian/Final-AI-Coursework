@@ -62,9 +62,7 @@ Over time, more complex models have been developed. It is generally agreed that 
 
 INSERT FIGURE 2
 
-Steps of CNN model:
-
-Convolutional Neural Networks, commonly known as CNNs, are a class of deep neural networks specially designed to process data with grid-like topology, such as images {cite}Goodfellow-et-al-2016,lecun2015deep. Originating from the visual cortex's biological processes, CNNs are revolutionising the way we understand and interpret visual data.
+CNN is a class of deep neural networks specially designed to process data with grid-like topology, such as images. Originating from the visual cortex's biological processes, CNNs are revolutionising the way we understand and interpret visual data.
 
 Why CNN for Image Data?
 
@@ -88,8 +86,6 @@ Advantages of CNNs
 
 Parameter Sharing: A feature detector (filter) that's useful in one part of the image can be useful in another part of the image {cite}krizhevsky2012imagenet.
 Sparsity of Connections: In each layer, each output value depends only on a small number of input values, making the computation more efficient.
-
-Steps of Random Forests model:
 
 Random Forest is a notable and significant part of machine learning and is commonly used for classification. It can also be used for regression, but its application in classification is more prevalent. Decision Trees are the core components of a Random Forest, so let's delve into the concepts of Decision Trees {cite}breiman2001random,quinlan1986induction.
 
