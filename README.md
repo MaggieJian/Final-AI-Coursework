@@ -50,7 +50,9 @@ Each band has different offsets from each other:
 
 Image credit: Sentinel Online, 2020
 
-INSERT FIGURE 1
+![Uploading copy of fig 1.png…]()
+
+Figure 1: A figure illustrating the remote sensing technique of optical imaging, Sentinel-2, its 13 bands, and the application of this technique in Earth observation. (Information credit: ESA - Available at: https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-3-olci/resolutions/radiometric).
 
 IRIS is a recent annotation tool developed over the past 4 years developed by the ESA Phil-Lab, which aims to make surface classification of multispectral and multimodel imagery a quicker and easier process for users. It leverages the iterative and sequential machine learning technique of artificial intelligence known as 'gradient boosted decision trees'. Each decision tree identifies errors from the previous tree to make corrections via a sequential manner. It can run on Linux, Windows and Mac OS (Wheeler, 2024).
 
@@ -60,7 +62,9 @@ In this project, IRIS will be used to create training and testing data for a ViT
 
 Over time, more complex models have been developed. It is generally agreed that Random Forests are the most traditional of the three models, followed by the two deep learning models, CNN and ViT. ViT has only recently been used in image processing in addition to natural language processing (Uparker et al., 2023).
 
-INSERT FIGURE 2
+![fig2downld](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/ad537950-4318-40b7-9b9b-9c493e4a7099)
+
+Figure 2: A diagram of the AI algorithms used in this project and their ways of implementation
 
 CNN is a class of deep neural networks specially designed to process data with grid-like topology, such as images. Originating from the visual cortex's biological processes, CNNs are revolutionising the way we understand and interpret visual data.
 
@@ -350,3 +354,5 @@ Uparkar, O., Bharti, J., Pateriya, R.K., Gupta, R.K. and Sharma, A. (2023). Visi
 Wheeler, J. (2024). ESA-PhiLab/iris. [online] Available at: https://github.com/ESA-PhiLab/iris [Accessed 11 May 2024].
 
 ‌Yale Center for Business and the Environment. (2024). Marina Bay Sands. [online] Available at: https://cbey.yale.edu/research/marina-bay-sands#:~:text=Standing%20at%20water [Accessed May 2024].
+
+Zhao, L. and Ji, S. (2022). CNN, RNN, or ViT? An evaluation of different deep learning architectures for spatio-temporal representation of Sentinel time series. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 16, pp.44-56.
