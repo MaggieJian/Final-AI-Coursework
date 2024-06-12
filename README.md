@@ -5,7 +5,7 @@ Image: Mask of the location of interest showing urban roads (white) against urba
 
 The purpose of this project is to explore the effectiveness of IRIS (Intelligently Reinforced Image Segmentation) for surface classification using an urban setting. It creates semi-supervised classified imagery that aims to differentiate between green spaces and urban walkways/buildings/etc., in the context of the Gardens by the Bay area of the south-eastern country of Singapore, which will be used as training data to critically analyse the performance of IRIS under three comparable supervised machine learning models: Convolutional Neural Network (CNN), Random Forest (RF) and Vision Transformer (ViT). The model performances were evaluated using model selection and a cross-validation score. As an extension, an unsupervised model (K-Means Clustering) was explored without IRIS using the same Sentinel-2 data. Overall, this project can be a starting point to understand ways to improve surface classification ML platforms and approaches of usage, extending to a wider range of future applications.
 
-Summary of the results: The ViT model produced a better cross-validation score and was favoured in the model selection compared to the CNN and Random Forest models
+Summary of the results: The ViT model produced a better cross-validation score and was favoured in the model selection compared to the CNN and Random Forest models. Mean cross-validation score:  0.844453410931932. When using the best parameters found during the search, the corresponding mean cross-validation score was 84.71%.
 
 This repository provides access to the relevant code, ipynb files, figures and version histories for the project.
 
@@ -309,7 +309,13 @@ The mask created in this project is below:
 Using IRIS, green spaces were partially optically catagorised (~2% of the whole image was supervised training data, whereas the rest of the image was identified using IRIS' artificial intelligence system). This resulted in a semi-supervised classification. 
 Note that during summer when this Sentinel-2 data was collected, increased foliage may have obscured the roads and created more shadows compared to in the winter.
 
-After completing the extension, the following result was produced.
+After comparing the models, the mean cross-validation score was 0.844453410931932. This means that the models performed with good (84.45%) accuracy on average across multiple validation iterations across different subsets of the training data.
+
+During a hyperparameter search (likely using techniques like grid search or randomized search), the best performing parameters for the model were found to be a maximum depth of 10 for the decision trees in the ensemble and 50 estimators (trees) in the random forest.
+
+When using the best parameters found during the search, the corresponding mean cross-validation score was good (84.71%).
+
+After completing the unsupervised learning extension, the following result was produced.
 
 ![kimage](https://github.com/MaggieJian/Final-AI-Coursework/assets/160494175/9aad64a2-d1d1-4440-bc3a-3f1295b17c10)
 
